@@ -1,4 +1,4 @@
-# Collective Conscious
+# Such Issues Wow
 ### An awesomely simple git repository browser
 
 ### Specification
