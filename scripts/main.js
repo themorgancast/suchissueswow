@@ -69,7 +69,7 @@ IssueTracker.prototype.handleNoReposFound = function() {
   search.selectedRepo = '';
   search.commits = [];
   this.resetRepoList();
-  $('.repos').append('<h3>Sorry, we could not find any public organizations under ' + search.orgName + '!<h3>');
+  $('.repos').append('<h3>Sorry, we could not find any repositories under ' + search.orgName + '!<h3>');
 }
 
 IssueTracker.prototype.loadRepos = function() {

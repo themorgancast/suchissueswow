@@ -9,6 +9,23 @@ This project was built without npm, yarn, or any type of framework. This is deli
 
 To get going, simply load `index.html` in your favorite browser.
 
+### Testing
+
+No test suite is included with this project.
+
+To run manual tests you can do the following:
+
+##### Searching for an Organization
+
+* Search for an organization that is private, .e.g. `TheCognizantFoundry` and watch for an error message.
+* Search for a nonexistent organization, e.g. `doge` and watch for an error message.
+* Search for an organization that is public, e.g. `airbnb` and watch the list of repositories populate. Repos with the largest amount of open issues are at the top of the list.
+
+##### Viewing Commit History for a Repository
+
+* A repository without commits will render a modal with a message that there are no commits to view.
+* A repository with a commit history will render a modal with the most recent commits with some details on those commits.
+
 ### Here is a Shiba Inu GIF
 Just because.
 

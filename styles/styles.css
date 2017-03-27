@@ -11,7 +11,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #203541;
-  margin: 0.2em 0;
+  margin: 0.2em;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 .repos {
@@ -25,8 +29,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .repos ul li {
   display: block;
-  width: 80%;
-  height: 200px;
+  width: 40%;
+  height: 150px;
   margin: 20px;
   background-color: #203541;
   color: #ffffff;
