@@ -75,34 +75,32 @@ IssueTracker.prototype.handleNoReposFound = function() {
 IssueTracker.prototype.loadRepos = function() {
   var repo = '';
   var reposList = search.repos
-    .sort(function(a,b) { b.open_issues - a.open_issues })
+    .sort(function(a,b) { return b.open_issues_count - a.open_issues_count })
     .map(function(repo, i) {
       return '<li>' +
         '<span class="repoName">' + repo.name + '</span><br />' +
-        '<span class="issueCount">' + repo.open_issues + ' open issues</span><br />' +
+        '<span class="issueCount">' + repo.open_issues_count + ' open issues</span><br />' +
         '<button data-repo="' + repo.name + '">Browse commits</button>' +
       '</li>'
     });
   $('#results').append(reposList);
-  this.bindEvents();
 }
 
 IssueTracker.prototype.loadCommits = function() {
   var commitsList = search.commits.map(function(commit, i) {
-    return '<ul>' +
-      '<li>Sha: ' + commit.sha + '</li>' +
-      '<li>Commiter: ' + commit.author.login + '</li>' +
-      '<li>Message: ' + commit.commit.message + '</li>' +
-      '<li><a href="' + commit.url + '" target="_blank">view more details</a></li>' +
-      '</ul>'
+    return '<li>' +
+      '<span>' + commit.sha + '</span><br/>' +
+      '<span>' + commit.commit.message + '</span>' +
+      '<a href="' + commit.html_url + '" target="_blank">view more details</a>' +
+    '</li>'
   });
-  $('#modal-content').append(commitsList);
+  $('#modal-content').find('ul').append(commitsList);
 }
 
 IssueTracker.prototype.launchModal = function() {
   $('.modal').show();
   $('#overlay').show();
-  $('.modal').find('h4').text('Commit history for '+ search.selectedRepo);
+  $('.modal').find('h3').text('Commit history for '+ search.selectedRepo);
   $('body').css('overflow', 'hidden');
 }
 

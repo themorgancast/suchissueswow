@@ -18,17 +18,24 @@ h1 {
   font-size: 3em;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #203541;
+}
+
+
 .repos {
   margin-top: 80px;
 }
 .repos h3 {
   text-align: center;
 }
-.repos ul {
-  list-style-type: none;
-}
 .repos ul li {
-  display: block;
+  display: inline-block;
   width: 40%;
   height: 150px;
   margin: 20px;
@@ -93,4 +100,23 @@ input[type='submit'] {
   background-color: #0D1A29;
   color: #ffffff;
   margin: 30px auto 0;
+}
+
+
+#modal-content h3 {
+  text-align: center;
+}
+
+#modal-content ul {
+  padding-right: 40px;
+}
+
+#modal-content ul li {
+  margin: 35px 0;
+}
+
+#modal-content ul li a {
+  text-align: right;
+  display: block;
+  color: #98C1B0;
 }
